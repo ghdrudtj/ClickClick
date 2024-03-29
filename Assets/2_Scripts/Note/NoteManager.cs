@@ -6,31 +6,25 @@ public class NoteManager : MonoBehaviour
 {
    public static NoteManager Instance;
 
+    [SerializeField] private NoteGroup[] noteGroupsArr;
+
     private void Awake()
     {
         Instance = this;
     }
 
-    public void onInput(KeyCode keyCode)
+    public void OnInput(KeyCode keyCode)
     {
-        Debug.Log("Keycode = " + keyCode);
-
-    }
-        private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.A))
+       if (keyCode == KeyCode.A)
         {
-            NoteManager.Instance.onInput(KeyCode.A);
+            noteGroupsArr[0].OnInput(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (keyCode == KeyCode.S)
         {
-            NoteManager.Instance.onInput(KeyCode.S);
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            NoteManager.Instance.onInput(KeyCode.D);
+            noteGroupsArr[1].OnInput(true);
         }
     }
+
+    
 }

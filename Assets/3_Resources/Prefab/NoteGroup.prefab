@@ -181,6 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6357769420774019822}
   - component: {fileID: 4323393930894019129}
+  - component: {fileID: 532947546640165245}
   m_Layer: 0
   m_Name: NoteGroup
   m_TagString: Untagged
@@ -197,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 3818493479254285327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -12.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -223,6 +224,27 @@ MonoBehaviour:
   notePrefab: {fileID: 4781103465479409561, guid: 5bd1f0a7213763f49856c86357b51861, type: 3}
   noteSpawn: {fileID: 7190814318105295898}
   noteGap: 6.5
+  BtnSpriteRenderer: {fileID: 2878002754613721584}
+  normalBtnSprite: {fileID: 0}
+  selectBtnSprite: {fileID: 0}
+  anim: {fileID: 532947546640165245}
+--- !u!111 &532947546640165245
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3818493479254285327}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 1ed87601f4cbaa440a809a6501a582df, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 1ed87601f4cbaa440a809a6501a582df, type: 2}
+  - {fileID: 7400000, guid: c3f74be3372f38848a01d4c960e483a9, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3834197062205540324
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214931434194781483}
   - component: {fileID: 2878002754613721584}
+  - component: {fileID: 3381473029746142798}
   m_Layer: 0
   m_Name: Btn
   m_TagString: Untagged
@@ -449,7 +472,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -19.5, z: 0}
-  m_LocalScale: {x: 7.6590743, y: 2.4143636, z: 1}
+  m_LocalScale: {x: 7.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7718720966851286136}
@@ -507,3 +530,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3381473029746142798
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475505764986532110}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2f9e72163c7b4341a874259f777e56f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
