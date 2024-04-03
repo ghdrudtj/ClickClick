@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NoteManager : MonoBehaviour
 {
-   public static NoteManager Instance;
+    public static NoteManager Instance;
 
     [SerializeField] private NoteGroup[] noteGroupsArr;
 
@@ -15,16 +15,17 @@ public class NoteManager : MonoBehaviour
 
     public void OnInput(KeyCode keyCode)
     {
-       if (keyCode == KeyCode.A)
+        int randld = Random.Range(0, noteGroupsArr.Length);
+        bool isApple = randld == 0 ? true : false;
+
+        foreach (NoteGroup noteGroup in noteGroupsArr)
         {
-            noteGroupsArr[0].OnInput(true);
+            if (keyCode == noteGroup.KeyCode)
+            {
+                noteGroup.OnInput(isApple);
+            }
         }
 
-        if (keyCode == KeyCode.S)
-        {
-            noteGroupsArr[1].OnInput(true);
-        }
+      
     }
-
-    
-}
+}     

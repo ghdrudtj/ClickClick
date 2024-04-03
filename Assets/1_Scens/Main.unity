@@ -314,17 +314,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2878002754613721584, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878002754613721584, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d7b61edc0b017174095824530172ad1f, type: 3}
     - target: {fileID: 3818493479254285327, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
       propertyPath: m_Name
       value: NoteGroup (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323393930894019129, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
+      propertyPath: keyCode
+      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 4323393930894019129, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
       propertyPath: normalBtnSprite
@@ -508,17 +504,13 @@ PrefabInstance:
       propertyPath: m_Animations.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2878002754613721584, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878002754613721584, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d7b61edc0b017174095824530172ad1f, type: 3}
     - target: {fileID: 3818493479254285327, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
       propertyPath: m_Name
       value: NoteGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323393930894019129, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
+      propertyPath: keyCode
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 4323393930894019129, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
       propertyPath: normalBtnSprite
