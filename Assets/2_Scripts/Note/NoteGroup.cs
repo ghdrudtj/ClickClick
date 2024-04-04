@@ -14,7 +14,7 @@ public class NoteGroup : MonoBehaviour
     [SerializeField] private Sprite normalBtnSprite;
     [SerializeField] private Sprite selectBtnSprite;
     [SerializeField] private Animation anim;
-    [SerializeField] private KeyCode keyCode;
+    private KeyCode keyCode;
 
     public KeyCode KeyCode
     {
@@ -28,16 +28,15 @@ public class NoteGroup : MonoBehaviour
     private List<Note> noteList = new List<Note>();
     
 
-    void Start()
+    public void Create(KeyCode keyCode)
     {
         for (int i = 0; i < noteMaxNum; i++)
         {
-            SpawnNote(true);
+            CreateNote(true);
         }
-
     }
 
-    private void SpawnNote(bool isApple)
+    private void CreateNote(bool isApple)
     {
         GameObject noteGameObj = Instantiate(notePrefab);
         noteGameObj.transform.SetParent(noteSpawn.transform);
@@ -60,18 +59,17 @@ public class NoteGroup : MonoBehaviour
         if (noteList.Count > 0)
         {
             Note delNote = noteList[0];
-            delNote.Destroy();
+            delNote.DeleteNote();
             noteList.RemoveAt(0);
         }
 
         for (int i = 0; i < noteList.Count; i++)
             noteList[i].transform.localPosition = Vector3.up * i * noteGap;
 
-        SpawnNote(isApple);
+        CreateNote(isApple);
 
         anim.Play();
         BtnSpriteRenderer.sprite = selectBtnSprite;
-
     }
      public void callAniDone()
     {
