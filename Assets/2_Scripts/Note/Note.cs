@@ -11,10 +11,7 @@ public class Note : MonoBehaviour
     [SerializeField] private Sprite blueberrySprite;
 
     private bool isApple;
-    public void Destroy()
-    {
-        GameObject.Destroy(gameObject);
-    }
+    
 
     public void SetSprite(bool isApple)
     {
@@ -27,6 +24,11 @@ public class Note : MonoBehaviour
         GameManger.lnstance.CalculateScore(isApple);
 
         Destroy();
+    }
+
+    public void Destroy()
+    {
+        GameObject.Destroy(gameObject);
     }
 
     void Start()
