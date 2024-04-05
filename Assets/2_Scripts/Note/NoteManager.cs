@@ -6,7 +6,7 @@ public class NoteManager : MonoBehaviour
 {
     public static NoteManager Instance;
 
-    private List<NoteGroup> noteGroupList = new List<NoteGroup>();
+    [SerializeField]private NoteGroup[] noteGroupsArr;
 
     private void Awake()
     {
@@ -15,10 +15,10 @@ public class NoteManager : MonoBehaviour
 
     public void OnInput(KeyCode keyCode)
     {
-        int randld = Random.Range(0, noteGroupList.Count);
+        int randld = Random.Range(0, noteGroupsArr.Length);
         bool isApple = randld == 0 ? true : false;
 
-        foreach (NoteGroup noteGroup in noteGroupList)
+        foreach (NoteGroup noteGroup in noteGroupsArr)
         {
             if (keyCode == noteGroup.KeyCode)
             {
