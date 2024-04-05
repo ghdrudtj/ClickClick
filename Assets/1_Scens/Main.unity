@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c3e9523506e0442935e787e3b46ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iniKeyCodeArr: 610000007300000064000000
+  iniKeyCodeArr: 660000006700000068000000
   noteGroupPrefab: {fileID: 3818493479254285327, guid: 9dc34bdc61da78f46a82a1c97e877f6a, type: 3}
   noteGroupGap: 12
 --- !u!4 &990354564
