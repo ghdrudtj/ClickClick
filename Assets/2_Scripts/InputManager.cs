@@ -16,16 +16,17 @@ public class InputManager : MonoBehaviour
 
     public void AddKeyCode(KeyCode _keyCode)
     {
-        this.keyCodeList.Add(_keyCode);
+        keyCodeList.Add(_keyCode);
     }
 
     private void Update()
     {
-        foreach (KeyCode keyCode in this.keyCodeList)
+        foreach (KeyCode keyCode in keyCodeList)
         {
             if (Input.GetKeyDown(keyCode) == true)
             {
-                NoteManager.Instance.OnInput(keyCode);
+                NoteManager.Instance.OnInput(keyCode); 
+                break;
             }
         }
     }
