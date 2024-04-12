@@ -1,8 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 public class NoteManager : MonoBehaviour
 {
@@ -33,8 +30,11 @@ public class NoteManager : MonoBehaviour
 
     public void CreateNoteGroup()
     {
-        int noteGroupCount = noteGroupList.Count;
-        KeyCode keyCode = wholeKeyCodesArr[noteGroupCount];
+        
+        if (wholeKeyCodesArr.Length == noteGroupList.Count)
+            return;
+
+        KeyCode keyCode = this.wholeKeyCodesArr[noteGroupList.Count];
         CreateNoteGroup(keyCode);
     }
     
@@ -61,8 +61,6 @@ public class NoteManager : MonoBehaviour
                 break;
             }
         }
-
-      
     }
 
     

@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -55,13 +53,10 @@ public class NoteGroup : MonoBehaviour
 
         noteList.Add(note);
     }
-
     void Update()
     {
         
     }
-
-
     public void OnInput(bool isApple)
     {
         if (noteList.Count > 0)
@@ -83,5 +78,4 @@ public class NoteGroup : MonoBehaviour
     {
         BtnSpriteRenderer.sprite = normalBtnSprite;
     }
-   
 }
