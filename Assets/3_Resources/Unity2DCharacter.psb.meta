@@ -1479,9 +1479,9 @@ ScriptedImporter:
     spriteBone:
     - name: Right Lower Leg Bone
       guid: 3ea98f25f98039341a19476e526ae309
-      position: {x: 18.351006, y: 0.00005401486, z: 0}
-      rotation: {x: 0, y: 0, z: 0.016061403, w: 0.999871}
-      length: 15.474372
+      position: {x: 20.72514, y: 0.00004104816, z: 0}
+      rotation: {x: 0, y: 0, z: -0.023338092, w: 0.99972767}
+      length: 16.213877
       parentId: 1
       color:
         serializedVersion: 2
@@ -1489,8 +1489,8 @@ ScriptedImporter:
     - name: Right Upper Leg Bone
       guid: 8b14356e93d3e5a4c904da67afe8cbb5
       position: {x: 15.186478, y: 40.431305, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7071083, w: -0.7071053}
-      length: 18.351013
+      rotation: {x: 0, y: 0, z: -0.68287474, w: 0.7305355}
+      length: 20.725086
       parentId: -1
       color:
         serializedVersion: 2
@@ -3796,17 +3796,17 @@ ScriptedImporter:
     - name: Right Upper Leg Bone
       guid: 8b14356e93d3e5a4c904da67afe8cbb5
       position: {x: 17.186478, y: 41.431305, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7071083, w: -0.7071053}
-      length: 18.351013
+      rotation: {x: 0, y: 0, z: -0.68287474, w: 0.7305355}
+      length: 20.725086
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4291165952
     - name: Right Lower Leg Bone
       guid: 3ea98f25f98039341a19476e526ae309
-      position: {x: 18.351, y: 0.000053538024, z: 0}
-      rotation: {x: 0, y: 0, z: 0.016061405, w: 0.9998711}
-      length: 15.474372
+      position: {x: 20.725079, y: 0.00001613771, z: 0}
+      rotation: {x: 0, y: 0, z: -0.02333809, w: 0.9997276}
+      length: 16.213877
       parentId: 0
       color:
         serializedVersion: 2
@@ -5467,17 +5467,17 @@ ScriptedImporter:
     - name: Right Upper Leg Bone
       guid: 8b14356e93d3e5a4c904da67afe8cbb5
       position: {x: 35.75122, y: 16.541555, z: 0}
-      rotation: {x: 0, y: -0, z: 0.99988526, w: 0.015149566}
-      length: 18.351013
+      rotation: {x: 0, y: -0, z: -0.99982786, w: 0.018558586}
+      length: 20.725082
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4291165952
     - name: Right Lower Leg Bone
       guid: 3ea98f25f98039341a19476e526ae309
-      position: {x: 18.351013, y: 0.000050412167, z: 0}
-      rotation: {x: 0, y: 0, z: 0.01606141, w: 0.999871}
-      length: 15.474374
+      position: {x: 20.725073, y: 0.000022518157, z: 0}
+      rotation: {x: 0, y: 0, z: -0.023338111, w: 0.99972767}
+      length: 16.213875
       parentId: 1
       color:
         serializedVersion: 2
