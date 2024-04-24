@@ -91,7 +91,7 @@ public class GameManger : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main Scere");
     }
 
 
