@@ -29,11 +29,11 @@ public class UIManager : MonoBehaviour
     }
     void Start()
     {
-        
+        scoreTmp = GetComponent<TextMeshProUGUI>(); 
     }
 
     void Update()
     {
-        
+      
     }
 }

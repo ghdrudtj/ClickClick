@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManger : MonoBehaviour
 {
@@ -8,10 +10,11 @@ public class GameManger : MonoBehaviour
 
     [SerializeField] private int maxScore;
     [SerializeField] private int noteGroupCreateScore = 10;
-    [SerializeField] private GameObject gameClearObj;
-    [SerializeField] private GameObject gameOverObj;
+    public static bool isClear;
+    public static bool isOver;
 
-    private int score;
+    private static int score;
+    private static int time;
     private int nextNoteGroupUnlockCnt;
 
     [SerializeField] private float maxTime = 30f;
@@ -20,14 +23,12 @@ public class GameManger : MonoBehaviour
     {
         get
         {
-            if (gameClearObj.activeSelf || gameOverObj.activeSelf)
+            if (isClear|| isOver)
                 return true;
             else
                 return false;
         }
     }
-
-    
 
     private void Awake()
     {
@@ -36,13 +37,11 @@ public class GameManger : MonoBehaviour
 
     private void Start()
     {
-        UIManager.Instance.OnScoreChange(this.score, maxScore);
+        UIManager.Instance.OnScoreChange(currentScore: score, maxScore);
         NoteManager.Instance.Create();
 
-        gameClearObj.SetActive(false);
-        gameOverObj.SetActive(false);   
-
         StartCoroutine(TimerCoroutine());
+        
     }
     
     IEnumerator TimerCoroutine()
@@ -51,7 +50,7 @@ public class GameManger : MonoBehaviour
 
         while (currentTime < maxTime)
         {
-            currentTime+=Time.deltaTime;
+            currentTime += Time.deltaTime;
             UIManager.Instance.OnTimerChange(currentTime, maxTime);
             yield return null;
             if (isGameDone)
@@ -59,8 +58,12 @@ public class GameManger : MonoBehaviour
                 yield break;
             }
         }
-        gameOverObj.SetActive(true);
+        
+        isOver = true;
+        SceneManager.LoadScene("GameClear_Scene");
     }
+
+    
 
     public void CalculateScore(bool isCorrect)
     {
@@ -77,7 +80,8 @@ public class GameManger : MonoBehaviour
 
             if(maxScore<=score)
             {
-                gameClearObj.SetActive(true);
+                
+                SceneManager.LoadScene("GameClear_Scene");
             }
 
 
@@ -85,13 +89,13 @@ public class GameManger : MonoBehaviour
         {
             score--;
         }
-        
-        UIManager.Instance.OnScoreChange(this.score, maxScore);
+        isClear = true;
+        UIManager.Instance.OnScoreChange(currentScore: score, maxScore);
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene("Main Scere");
+        SceneManager.LoadScene("Main_Scene");
     }
 
 
