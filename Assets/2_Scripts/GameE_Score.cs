@@ -1,41 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameE_Score : MonoBehaviour
 {
-    [SerializeField] private GameObject ScoreTmp;
-    [SerializeField] private GameObject TimeTmp;
+    public static int score = 0;
+    public static int bestScore = 0;
+    Text uiText;
 
-    public static bool isClear;
-    public static bool isOver;
-    public bool isGameDone
+    void Start()
     {
-        get
-        {
-            if (ScoreTmp.activeSelf || TimeTmp.activeSelf)
-                return true;
-            else
-                return false;
-        }
+        uiText =GetComponent<Text>();
+        score = 0;
     }
-    private void Start()
-    {
-        ScoreTmp.SetActive(false);
-        TimeTmp.SetActive(false);
 
-        if (isClear == true)
-        {
-            TimeTmp.SetActive(true);
-        }
-        if (isOver == true)
-        {
-            ScoreTmp.SetActive(true);
-        }
-    }
+
 
     void Update()
     {
-        
+        uiText.text = score.ToString();
     }
 }

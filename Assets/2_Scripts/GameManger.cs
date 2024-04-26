@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class GameManger : MonoBehaviour
 {
@@ -10,11 +11,13 @@ public class GameManger : MonoBehaviour
 
     [SerializeField] private int maxScore;
     [SerializeField] private int noteGroupCreateScore = 10;
+
     public static bool isClear;
     public static bool isOver;
+    
+    public static int score=0;
+    public static int bestScore=0;
 
-    private static int score;
-    private static int time;
     private int nextNoteGroupUnlockCnt;
 
     [SerializeField] private float maxTime = 30f;
@@ -35,32 +38,37 @@ public class GameManger : MonoBehaviour
         lnstance = this;
     }
 
-    private void Start()
+    void Start()
     {
-        UIManager.Instance.OnScoreChange(currentScore: score, maxScore);
+        isClear = false;
+        isOver = false;
+
+        UIManager.Instance.OnScoreChange(score, maxScore);
         NoteManager.Instance.Create();
 
         StartCoroutine(TimerCoroutine());
+        score = 0;
+    }
+    void Update()
+    {
         
     }
-    
+
     IEnumerator TimerCoroutine()
     {
         float currentTime = 0f;
-
         while (currentTime < maxTime)
         {
             currentTime += Time.deltaTime;
             UIManager.Instance.OnTimerChange(currentTime, maxTime);
             yield return null;
             if (isGameDone)
-            {
+            {        
                 yield break;
             }
         }
-        
         isOver = true;
-        SceneManager.LoadScene("GameClear_Scene");
+        SceneManager.LoadScene("GameClear_Scene 1");
     }
 
     
@@ -80,17 +88,17 @@ public class GameManger : MonoBehaviour
 
             if(maxScore<=score)
             {
-                
+                isClear = true;
                 SceneManager.LoadScene("GameClear_Scene");
             }
-
+            
 
         } else
         {
             score--;
         }
-        isClear = true;
-        UIManager.Instance.OnScoreChange(currentScore: score, maxScore);
+        
+        UIManager.Instance.OnScoreChange(score, maxScore);
     }
 
     public void Restart()

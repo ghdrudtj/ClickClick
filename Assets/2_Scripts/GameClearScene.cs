@@ -7,7 +7,7 @@ public class GameClearScene : MonoBehaviour
 {
     public void Gameplay()
     {
-        SceneManager.LoadScene("Start_Scene");
+        SceneManager.LoadScene("Main_Scene");
     }
 
     void Update()

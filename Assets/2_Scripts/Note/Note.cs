@@ -20,6 +20,10 @@ public class Note : MonoBehaviour
         GameManger.lnstance.CalculateScore(isApple);
 
         Destroy();
+        if (GameManger.score > GameManger.bestScore)
+        {
+            GameManger.bestScore = GameManger.score;
+        }
     }
 
     public void Destroy()
