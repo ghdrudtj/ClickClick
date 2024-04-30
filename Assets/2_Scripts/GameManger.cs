@@ -18,6 +18,14 @@ public class GameManger : MonoBehaviour
     public static int score=0;
     public static int bestScore=0;
 
+    public AudioClip notegroupsound;
+    public AudioSource notegroup;
+
+    public AudioClip AppleS;
+    public AudioSource AppleSound;
+    public AudioClip blueS;
+    public AudioSource blueSound;
+
     private int nextNoteGroupUnlockCnt;
 
     [SerializeField] private float maxTime = 30f;
@@ -71,19 +79,35 @@ public class GameManger : MonoBehaviour
         SceneManager.LoadScene("GameClear_Scene 1");
     }
 
-    
-
+    public void Notegroupsound()
+    {
+        notegroup.PlayOneShot(notegroupsound);
+    }
+    public void Applesound()
+    {
+         AppleSound.PlayOneShot(AppleS);
+    }
+    public void bluesound()
+    {
+        blueSound.PlayOneShot(blueS);
+    }
+        
     public void CalculateScore(bool isCorrect)
     {
         if (isCorrect) 
         {
             score++;
             nextNoteGroupUnlockCnt++;
+            Applesound();
+            
 
             if(noteGroupCreateScore <= nextNoteGroupUnlockCnt)
             {
                 nextNoteGroupUnlockCnt = 0;
                 NoteManager.Instance.CreateNoteGroup();
+
+                Notegroupsound();
+
             }
 
             if(maxScore<=score)
@@ -96,6 +120,7 @@ public class GameManger : MonoBehaviour
         } else
         {
             score--;
+            bluesound();
         }
         
         UIManager.Instance.OnScoreChange(score, maxScore);
@@ -105,6 +130,4 @@ public class GameManger : MonoBehaviour
     {
         SceneManager.LoadScene("Main_Scene");
     }
-
-
 }

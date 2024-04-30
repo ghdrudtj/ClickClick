@@ -6,7 +6,7 @@ public class NoteManager : MonoBehaviour
     public static NoteManager Instance;
 
     [SerializeField] private GameObject noteGroupPrefab;
-    [SerializeField] private float noteGroupGap =1f;
+    [SerializeField] private float noteGroupGap = 1f;
     [SerializeField]
     private KeyCode[] wholeKeyCodesArr = new KeyCode[]
     {
@@ -15,6 +15,7 @@ public class NoteManager : MonoBehaviour
     };
     [SerializeField] private int initNoteGroupNum = 2;
     private List<NoteGroup> noteGroupList = new List<NoteGroup>();
+
     private void Awake()
     {
         Instance = this;
