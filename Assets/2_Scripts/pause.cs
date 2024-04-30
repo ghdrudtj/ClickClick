@@ -24,6 +24,8 @@ public class pause : MonoBehaviour
             
             pauseActive = true;
         }
+
+        InputManager.Instance.setPauseAction(pauseActive);
     }
     void Start()
     {

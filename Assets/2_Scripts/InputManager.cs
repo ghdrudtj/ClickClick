@@ -6,10 +6,14 @@ public class InputManager : MonoBehaviour
     public static InputManager Instance;
 
     private List<KeyCode> keyCodeList = new List<KeyCode>();
-
+    bool pauseAction;
     private void Awake()
     {
         Instance = this;
+    }
+    public void setPauseAction(bool pause)
+    {
+        this.pauseAction = pause;   
     }
 
     public void AddKeyCode(KeyCode _keyCode)
@@ -19,7 +23,7 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManger.lnstance.isGameDone)
+        if (GameManger.lnstance.isGameDone || pauseAction)
         {
             return;
         }

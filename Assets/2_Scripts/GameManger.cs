@@ -20,7 +20,6 @@ public class GameManger : MonoBehaviour
 
     public AudioClip notegroupsound;
     public AudioSource notegroup;
-
     public AudioClip AppleS;
     public AudioSource AppleSound;
     public AudioClip blueS;
