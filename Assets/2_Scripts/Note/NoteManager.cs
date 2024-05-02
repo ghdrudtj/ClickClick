@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class NoteManager : MonoBehaviour
@@ -15,7 +16,7 @@ public class NoteManager : MonoBehaviour
     };
     [SerializeField] private int initNoteGroupNum = 2;
     private List<NoteGroup> noteGroupList = new List<NoteGroup>();
-
+    
     private void Awake()
     {
         Instance = this;
@@ -34,7 +35,7 @@ public class NoteManager : MonoBehaviour
         
         if (wholeKeyCodesArr.Length == noteGroupList.Count)
             return;
-
+        noteAnim.Instance.CreateNoteGroup();
         KeyCode keyCode = this.wholeKeyCodesArr[noteGroupList.Count];
         CreateNoteGroup(keyCode);
     }

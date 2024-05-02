@@ -229,6 +229,7 @@ MonoBehaviour:
   selectBtnSprite: {fileID: 21300000, guid: 4fce3950ae84d9c46a154454c898bf17, type: 3}
   keyCodeTmp: {fileID: 9021971475431376011}
   anim: {fileID: 532947546640165245}
+  notegroupanim: {fileID: 532947546640165245}
 --- !u!111 &532947546640165245
 Animation:
   m_ObjectHideFlags: 0
@@ -238,9 +239,10 @@ Animation:
   m_GameObject: {fileID: 3818493479254285327}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 1ed87601f4cbaa440a809a6501a582df, type: 2}
+  m_Animation: {fileID: 7400000, guid: aabbf3d7f48ad534c9777657e2a8efb8, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 1ed87601f4cbaa440a809a6501a582df, type: 2}
+  - {fileID: 7400000, guid: aabbf3d7f48ad534c9777657e2a8efb8, type: 2}
+  - {fileID: 7400000, guid: 944b8ff6551108847b2e50b5d3e71feb, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -454,7 +456,6 @@ GameObject:
   m_Component:
   - component: {fileID: 214931434194781483}
   - component: {fileID: 2878002754613721584}
-  - component: {fileID: 3381473029746142798}
   m_Layer: 0
   m_Name: Btn
   m_TagString: Untagged
@@ -530,24 +531,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3381473029746142798
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8475505764986532110}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f2f9e72163c7b4341a874259f777e56f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

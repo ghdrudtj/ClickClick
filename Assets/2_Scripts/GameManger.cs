@@ -99,14 +99,12 @@ public class GameManger : MonoBehaviour
             nextNoteGroupUnlockCnt++;
             Applesound();
             
-
-            if(noteGroupCreateScore <= nextNoteGroupUnlockCnt)
+            if (noteGroupCreateScore <= nextNoteGroupUnlockCnt)
             {
                 nextNoteGroupUnlockCnt = 0;
                 NoteManager.Instance.CreateNoteGroup();
-
+                
                 Notegroupsound();
-
             }
 
             if(maxScore<=score)

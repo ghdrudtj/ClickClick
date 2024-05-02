@@ -5,17 +5,17 @@ using UnityEngine;
 public class NoteGroup : MonoBehaviour
 {
     [SerializeField] private int noteMaxNum = 5;
-    [SerializeField] private GameObject notePrefab=null;
-    [SerializeField] private GameObject noteSpawn=null;
-    [SerializeField] private float noteGap =6.5f;
+    [SerializeField] private GameObject notePrefab = null;
+    [SerializeField] private GameObject noteSpawn = null;
+    [SerializeField] private float noteGap = 6.5f;
 
     [SerializeField] private SpriteRenderer BtnSpriteRenderer = null;
-    [SerializeField] private Sprite normalBtnSprite=null;
-    [SerializeField] private Sprite selectBtnSprite= null;
+    [SerializeField] private Sprite normalBtnSprite = null;
+    [SerializeField] private Sprite selectBtnSprite = null;
     [SerializeField] private TextMeshPro keyCodeTmp;
     [SerializeField] private Animation anim;
-    
-    
+    [SerializeField] private Animation notegroupanim;
+
     private KeyCode keyCode;
 
     public KeyCode KeyCode
@@ -25,7 +25,10 @@ public class NoteGroup : MonoBehaviour
             return keyCode;
         }
     }
-
+    public void Start()
+    {
+        notegroupanim.Play();
+    }
 
     private List<Note> noteList = new List<Note>();
     
@@ -39,7 +42,7 @@ public class NoteGroup : MonoBehaviour
         {
             CreateNote(true);
         }
-
+        
         InputManager.Instance.AddKeyCode(_keycode);
     }
 
