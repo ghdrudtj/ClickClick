@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxScore: 100
-  noteGroupCreateScore: 10
+  noteGroupCreateScore: 5
   notegroupsound: {fileID: 8300000, guid: 01fec02ddbe6aaa4b86956c351aaa7cc, type: 3}
   notegroup: {fileID: 519420033}
   AppleS: {fileID: 8300000, guid: e5e290a419440084a8c5b876922a9ae4, type: 3}
